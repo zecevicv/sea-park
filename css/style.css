@@ -353,12 +353,13 @@ input {
   transform: translateY(25%);
 }
 
-.header {
+/* Scolled */
+.header.header-scrolled {
   background-color: white;
   color: #B38F5E;
 }
 
-.header .logo {
+.header.header-scrolled .logo {
   opacity: 1;
   visibility: visible;
 }
@@ -372,8 +373,24 @@ input {
     padding: 0 4vw;
   }
 
+  .header-hamburger {
+    position: relative;
+  }
+
   .header-hamburger img {
     width: 7.46vw;
+  }
+
+  .header-hamburger img:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: all .4s ease;
+  }
+
+  .header.header-scrolled .header-hamburger img:last-child {
+    opacity: 1;
   }
 
   .header .logo img {
